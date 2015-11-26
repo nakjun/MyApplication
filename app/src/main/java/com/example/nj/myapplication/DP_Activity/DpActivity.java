@@ -20,6 +20,7 @@ import android.widget.Toast;
 import com.example.nj.myapplication.IDSingletonclass;
 import com.example.nj.myapplication.MainActivity;
 import com.example.nj.myapplication.R;
+import com.example.nj.myapplication.Util;
 
 import java.io.BufferedReader;
 import java.io.InputStreamReader;
@@ -36,7 +37,7 @@ public class DpActivity extends Activity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_dp);
-
+        Util.setGlobalFont(this,getWindow().getDecorView());
         ID = MainActivity.LoginID.get_ID();
 
         img1 = (ImageView)findViewById(R.id.imageView2);

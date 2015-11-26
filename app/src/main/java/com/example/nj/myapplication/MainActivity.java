@@ -43,6 +43,8 @@ public class MainActivity extends Activity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
+        Util.setGlobalFont(this,getWindow().getDecorView());
+
         init();
 
         btn_login = (Button) findViewById(R.id.btn_login);

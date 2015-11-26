@@ -6,14 +6,11 @@ import android.graphics.BitmapFactory;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
-import android.util.DisplayMetrics;
 import android.view.View;
 import android.widget.ImageButton;
-import android.widget.ImageView;
 import android.widget.TextView;
 
 import com.example.nj.myapplication.R;
-import com.example.nj.myapplication.Util;
 
 import java.util.Calendar;
 
@@ -22,7 +19,6 @@ public class SM_Activity_3 extends AppCompatActivity {
     TextView date;
     TextView feelings[];
     ImageButton btn_prev;
-    ImageView iv;
     Bitmap btn_prev_bitmap,btn_next_bitmap;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -30,10 +26,6 @@ public class SM_Activity_3 extends AppCompatActivity {
         setContentView(R.layout.activity_sm_activity_3);
         Toolbar toolbar = (Toolbar) findViewById(R.id.sm_3_toolbar);
 
-        DisplayMetrics displayMetrics = new DisplayMetrics();
-        Util.setGlobalFont(this, getWindow().getDecorView());
-        int deviceWidth = displayMetrics.widthPixels;
-        int deviceHeight = displayMetrics.heightPixels;
         setSupportActionBar(toolbar);
         setTitle("");
         btn_prev=(ImageButton)findViewById(R.id.sm_3_btn_prev);
@@ -48,9 +40,6 @@ public class SM_Activity_3 extends AppCompatActivity {
                 finish();
             }
         });
-
-        //iv=(ImageView)findViewById(R.id.imageView4);
-        //iv.setImageBitmap(Bitmap.createScaledBitmap(BitmapFactory.decodeResource(this.getResources(), R.drawable.sm_3_flower), 700, 700, false));
         cal=Calendar.getInstance();
         date=(TextView)findViewById(R.id.sm_3_date);
         String temp=getDayofWeek(cal.get(Calendar.DATE));

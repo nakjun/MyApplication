@@ -12,7 +12,6 @@ import android.support.design.widget.FloatingActionButton;
 import android.support.design.widget.Snackbar;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
-import android.util.DisplayMetrics;
 import android.view.View;
 import android.widget.ImageButton;
 import android.widget.ImageView;
@@ -33,17 +32,11 @@ public class DW_BreatheActivity3 extends Activity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_dw__breathe3);
         Util.setGlobalFont(this, getWindow().getDecorView());
-        DisplayMetrics displayMetrics = new DisplayMetrics();
-
-        getWindowManager().getDefaultDisplay().getMetrics(displayMetrics);
-
-        int deviceWidth = displayMetrics.widthPixels;
-        int deviceHeight = displayMetrics.heightPixels;
 
         Toolbar toolbar = (Toolbar) findViewById(R.id.dw_breathe_3_toolbar);
         toolbar.setTitle("");
 
-        backImageBitmap=Bitmap.createScaledBitmap(BitmapFactory.decodeResource(this.getResources(), R.drawable.sm_btn_left), 50, 50, false);
+        backImageBitmap=Bitmap.createScaledBitmap(BitmapFactory.decodeResource(this.getResources(), R.drawable.common_back_button), 100, 100, false);
         backImage =(ImageButton)findViewById(R.id.dw_sec_back4);
         backImage.setImageBitmap(backImageBitmap);
         backImage.setBackgroundResource(R.color.transparent);
@@ -63,7 +56,7 @@ public class DW_BreatheActivity3 extends Activity {
         botTextView.setText(R.string.dw_8sec);
 
         centerImage=(ImageView)findViewById(R.id.dw_breathe3_image);
-        centerImageBitmap=Bitmap.createScaledBitmap(BitmapFactory.decodeResource(this.getResources(), R.drawable.dw_breathe_8sec), (int)(deviceWidth*0.75),(int)(deviceWidth*0.75), false);
+        centerImageBitmap=Bitmap.createScaledBitmap(BitmapFactory.decodeResource(this.getResources(), R.drawable.dw_breathe_8sec), 900,1000, false);
         centerImage.setImageBitmap(centerImageBitmap);
         narration= MediaPlayer.create(getApplicationContext(), R.raw.dw_narration_6);
         narration.start();
@@ -72,7 +65,7 @@ public class DW_BreatheActivity3 extends Activity {
             public void run() {
                 try {
                     synchronized (this) {
-                        wait(9000);
+                        wait(8500);
                     }
                     narration.pause();
                     startActivity(new Intent(DW_BreatheActivity3.this, DW_RealBreatheActivity.class));

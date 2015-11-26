@@ -8,19 +8,16 @@ import android.graphics.drawable.BitmapDrawable;
 import android.graphics.drawable.Drawable;
 import android.media.MediaPlayer;
 import android.os.Bundle;
-import android.provider.Settings;
 import android.support.design.widget.FloatingActionButton;
 import android.support.design.widget.Snackbar;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
-import android.util.DisplayMetrics;
 import android.view.View;
 import android.widget.ImageButton;
 import android.widget.ImageView;
 import android.widget.TextView;
 
 import com.example.nj.myapplication.R;
-import com.example.nj.myapplication.Util;
 
 public class DW_BreatheActivity2 extends AppCompatActivity{
     TextView topTextView,botTextView;
@@ -33,18 +30,11 @@ public class DW_BreatheActivity2 extends AppCompatActivity{
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_dw__breathe2);
-        Util.setGlobalFont(this, getWindow().getDecorView());
-        DisplayMetrics displayMetrics = new DisplayMetrics();
 
-        getWindowManager().getDefaultDisplay().getMetrics(displayMetrics);
-
-        int deviceWidth = displayMetrics.widthPixels;
-        int deviceHeight = displayMetrics.heightPixels;
-        System.out.println("deviceWidth:"+deviceWidth);
         Toolbar toolbar = (Toolbar) findViewById(R.id.dw_breathe_2_toolbar);
         toolbar.setTitle("");
 
-        backImageBitmap=Bitmap.createScaledBitmap(BitmapFactory.decodeResource(this.getResources(), R.drawable.sm_btn_left), 50, 50, false);
+        backImageBitmap=Bitmap.createScaledBitmap(BitmapFactory.decodeResource(this.getResources(), R.drawable.common_back_button), 100, 100, false);
         backImage =(ImageButton)findViewById(R.id.dw_sec_back3);
         backImage.setImageBitmap(backImageBitmap);
         backImage.setBackgroundResource(R.color.transparent);
@@ -64,8 +54,7 @@ public class DW_BreatheActivity2 extends AppCompatActivity{
         botTextView.setText(R.string.dw_7sec);
 
         centerImage=(ImageView)findViewById(R.id.dw_breathe2_image);
-        System.out.println("deviceWidth:"+deviceWidth);
-        centerImageBitmap=Bitmap.createScaledBitmap(BitmapFactory.decodeResource(this.getResources(), R.drawable.dw_breathe_7sec), (int)(deviceWidth*0.75),(int)(deviceWidth*0.75), false);
+        centerImageBitmap=Bitmap.createScaledBitmap(BitmapFactory.decodeResource(this.getResources(), R.drawable.dw_breathe_7sec), 900, 1000, false);
         centerImage.setImageBitmap(centerImageBitmap);
         narration= MediaPlayer.create(getApplicationContext(), R.raw.dw_narration_5);
         narration.start();
@@ -74,7 +63,7 @@ public class DW_BreatheActivity2 extends AppCompatActivity{
             public void run() {
                 try {
                     synchronized (this) {
-                        wait(10000);
+                        wait(9000);
                     }
                     narration.pause();
                     startActivity(new Intent(DW_BreatheActivity2.this, DW_BreatheActivity3.class));

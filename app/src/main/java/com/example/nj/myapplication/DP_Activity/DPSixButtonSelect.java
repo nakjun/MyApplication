@@ -2,20 +2,15 @@ package com.example.nj.myapplication.DP_Activity;
 
 import android.app.Activity;
 import android.content.Intent;
-import android.content.SharedPreferences;
-import android.media.Image;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
-import android.widget.EditText;
-import android.widget.ImageView;
 import android.widget.TextView;
 
 import com.example.nj.myapplication.R;
-import com.example.nj.myapplication.Util;
 
 public class DPSixButtonSelect extends Activity {
     public static String select[] = {"", ""};
@@ -23,11 +18,9 @@ public class DPSixButtonSelect extends Activity {
     String Text[] = {"그 사람을 때리고\n밀쳤다", "소리나 비명을\n질렀다", "내버려두고\n가버렸다", "어른에게\n말했다", "아무것도 하지\n않았다", "기타\n다른 행동"};
     String Text_Title = "기분(감정)이 들때 나는 무엇을 했나요?";
 
-    boolean flag = false,etc_flag=false;
+    boolean flag = false;
     TextView title;
-    ImageView iView;
     Button btn[] = new Button[6];
-    EditText txt;
 
     Intent intent, get_intent;
     String str;
@@ -37,9 +30,6 @@ public class DPSixButtonSelect extends Activity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_dpsix_button_select);
 
-        txt = (EditText)findViewById(R.id.editText);
-
-        Util.setGlobalFont(this, getWindow().getDecorView());
         init();
         set_clickListener();
     }
@@ -55,7 +45,7 @@ public class DPSixButtonSelect extends Activity {
         btn[3] = (Button) findViewById(R.id.BUTTON_FOUR);
         btn[4] = (Button) findViewById(R.id.BUTTON_FIVE);
         btn[5] = (Button) findViewById(R.id.BUTTON_SIX);
-        iView = (ImageView)findViewById(R.id.imageView6);
+
         for (int i = 0; i < 6; i++) {
             btn[i].setText(Origin_Text[i]);
         }
@@ -131,32 +121,13 @@ public class DPSixButtonSelect extends Activity {
         btn[5].setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-
-                txt.setVisibility(View.VISIBLE);
-                iView.setVisibility(View.VISIBLE);
-            }
-        });
-        iView.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                if(etc_flag==false)
-                {
-                    txt.setVisibility(View.INVISIBLE);
-                    iView.setVisibility(View.INVISIBLE);
-                    etc_flag=true;
-                }
-                else {
-                    txt.setVisibility(View.VISIBLE);
-                    iView.setVisibility(View.VISIBLE);
-                }
-
                 if (flag) {
-                    select[1] =txt.getText().toString();
+                    select[1] = btn[5].getText().toString().replace("\n", " ");
                     intent_setting();
                 } else {
-                    select[0] = txt.getText().toString();
+                    select[0] = btn[5].getText().toString().replace("\n"," ");
                     setTextSixButton();
-                    flag=true;
+                    flag = true;
                 }
             }
         });

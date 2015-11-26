@@ -12,17 +12,13 @@ import android.support.design.widget.FloatingActionButton;
 import android.support.design.widget.Snackbar;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
-import android.util.DisplayMetrics;
-import android.view.Gravity;
 import android.view.View;
 import android.widget.ImageButton;
 import android.widget.ImageView;
 import android.widget.TextView;
-import android.widget.Toast;
 
 import com.example.nj.myapplication.DW_Activity.DW_BreatheActivity2;
 import com.example.nj.myapplication.R;
-import com.example.nj.myapplication.Util;
 
 public class SM_Activity extends AppCompatActivity {
     ImageButton imagebtn;
@@ -33,16 +29,8 @@ public class SM_Activity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_sm_activity);
-        Util.setGlobalFont(this, getWindow().getDecorView());
-        DisplayMetrics displayMetrics = new DisplayMetrics();
-
-        getWindowManager().getDefaultDisplay().getMetrics(displayMetrics);
-
-        int deviceWidth = displayMetrics.widthPixels;
-        int deviceHeight = displayMetrics.heightPixels;
-
         centerImage=(ImageView)findViewById(R.id.sm_main_centerimage);
-        centerImageBitmap=Bitmap.createScaledBitmap(BitmapFactory.decodeResource(this.getResources(), R.drawable.sm_main_1), deviceWidth, deviceHeight, false);
+        centerImageBitmap=Bitmap.createScaledBitmap(BitmapFactory.decodeResource(this.getResources(), R.drawable.sm_main_1), 800, 1200, false);
         centerImage.setImageBitmap(centerImageBitmap);
         btnBitmap=Bitmap.createScaledBitmap(BitmapFactory.decodeResource(this.getResources(), R.drawable.sm_btn_right), 80, 80, false);
         imagebtn=(ImageButton)findViewById(R.id.sm_main_btn);
