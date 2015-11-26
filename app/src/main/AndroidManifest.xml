@@ -220,18 +220,6 @@
             android:label="@string/title_activity_sm__activity_9"
             android:theme="@style/AppTheme.NoActionBar" >
         </activity>
-        <activity
-            android:name=".CDI_Activity.CDI_Activity"
-            android:label="@string/title_activity_cdi_" >
-        </activity>
-        <activity
-            android:name=".CDI_Activity.CDI_Activity1"
-            android:label="@string/title_activity_cdi_1" >
-        </activity>
-        <activity
-            android:name=".CDI_Activity.CDI_Activity2"
-            android:label="@string/title_activity_cdi_3" >
-        </activity>
     </application>
 
 </manifest>

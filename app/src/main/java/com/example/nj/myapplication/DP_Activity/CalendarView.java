@@ -10,7 +10,6 @@ import android.view.MenuItem;
 import android.widget.Toast;
 
 import com.example.nj.myapplication.R;
-import com.example.nj.myapplication.Util;
 
 import java.util.Calendar;
 
@@ -20,7 +19,7 @@ public class CalendarView extends Calendar3 {
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        Util.setGlobalFont(this, getWindow().getDecorView());
+
         setTitle("원하는 날짜를 선택해 주세요.");
         initialize();
 

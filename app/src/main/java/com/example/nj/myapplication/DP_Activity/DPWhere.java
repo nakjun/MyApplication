@@ -15,7 +15,6 @@ import android.widget.ImageView;
 import android.widget.Toast;
 
 import com.example.nj.myapplication.R;
-import com.example.nj.myapplication.Util;
 
 public class DPWhere extends Activity {
 
@@ -29,7 +28,7 @@ public class DPWhere extends Activity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_dpwhere);
-        Util.setGlobalFont(this, getWindow().getDecorView());
+
         img1 = (ImageView)findViewById(R.id.imageView_academy);
         img2 = (ImageView)findViewById(R.id.imageView_school);
         img3 = (ImageView)findViewById(R.id.imageView_home);

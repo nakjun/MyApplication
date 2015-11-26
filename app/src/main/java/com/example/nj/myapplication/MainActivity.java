@@ -15,7 +15,6 @@ import android.widget.ImageView;
 import android.widget.RelativeLayout;
 import android.widget.Toast;
 
-import com.example.nj.myapplication.CDI_Activity.CDI_Activity;
 import com.example.nj.myapplication.DW_Activity.DW_Activity;
 import com.example.nj.myapplication.YN_Activity.YesNoActivity;
 
@@ -43,8 +42,6 @@ public class MainActivity extends Activity {
 
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-
-        Util.setGlobalFont(this, getWindow().getDecorView());
 
         init();
 
@@ -74,7 +71,7 @@ public class MainActivity extends Activity {
         btn_find.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent i = new Intent(MainActivity.this, CDI_Activity.class);
+                Intent i = new Intent(MainActivity.this, HubActivity.class);
                 startActivity(i);
             }
         });

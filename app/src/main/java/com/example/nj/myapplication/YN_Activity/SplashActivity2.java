@@ -10,7 +10,6 @@ import android.widget.RelativeLayout;
 import android.widget.TextView;
 
 import com.example.nj.myapplication.R;
-import com.example.nj.myapplication.Util;
 
 public class SplashActivity2 extends Activity {
 
@@ -20,7 +19,7 @@ public class SplashActivity2 extends Activity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_splash2);
-        Util.setGlobalFont(this, getWindow().getDecorView());
+
         intent = getIntent();
         int yes_count = intent.getIntExtra("YesCount",0);
         int no_count = intent.getIntExtra("NoCount",0);

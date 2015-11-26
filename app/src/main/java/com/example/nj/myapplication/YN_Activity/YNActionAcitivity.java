@@ -18,7 +18,6 @@ import android.widget.ListView;
 import android.widget.TextView;
 
 import com.example.nj.myapplication.R;
-import com.example.nj.myapplication.Util;
 
 import java.util.ArrayList;
 
@@ -32,7 +31,7 @@ public class YNActionAcitivity extends Activity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_ynaction_acitivity);
-        Util.setGlobalFont(this, getWindow().getDecorView());
+
         intent = new Intent(YNActionAcitivity.this,YN_boardActivity.class);
 
         listView = (ListView)findViewById(R.id.listView);

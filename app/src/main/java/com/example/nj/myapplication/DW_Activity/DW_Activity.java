@@ -19,7 +19,6 @@ import android.widget.ImageView;
 import android.widget.TextView;
 
 import com.example.nj.myapplication.R;
-import com.example.nj.myapplication.Util;
 
 public class DW_Activity extends AppCompatActivity {
     TextView title;
@@ -32,7 +31,6 @@ public class DW_Activity extends AppCompatActivity {
 
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_dw_);
-        Util.setGlobalFont(this, getWindow().getDecorView());
         Toolbar toolbar = (Toolbar) findViewById(R.id.dw_main_toolbar);
         toolbar.setTitle("");
         toolbar.setTitleTextAppearance(getApplicationContext(), R.style.TextSize36);

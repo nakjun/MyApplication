@@ -43,7 +43,7 @@ public class JoinActivity extends Activity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_join);
-        Util.setGlobalFont(this, getWindow().getDecorView());
+
         btn_submit = (Button)findViewById(R.id.btn_submit_joindata);
         btn_submit.setOnClickListener(new View.OnClickListener() {
             @Override

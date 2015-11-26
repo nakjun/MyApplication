@@ -14,7 +14,6 @@ import android.widget.ImageButton;
 import android.widget.TextView;
 
 import com.example.nj.myapplication.R;
-import com.example.nj.myapplication.Util;
 
 public class DW_secondActivity extends AppCompatActivity {
     TextView top,mid,bot;
@@ -24,7 +23,7 @@ public class DW_secondActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_dw_second);
-        Util.setGlobalFont(this, getWindow().getDecorView());
+
         Toolbar toolbar = (Toolbar) findViewById(R.id.dw_2_toolbar);
         toolbar.setTitle("");
         DisplayMetrics displayMetrics = new DisplayMetrics();

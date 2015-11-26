@@ -11,7 +11,6 @@ import android.view.animation.*;
 import android.widget.ImageView;
 
 import com.example.nj.myapplication.R;
-import com.example.nj.myapplication.Util;
 
 import java.util.ArrayList;
 
@@ -24,7 +23,6 @@ public class DW_ReleaseActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_dw__release);
-        Util.setGlobalFont(this, getWindow().getDecorView());
         Toolbar toolbar = (Toolbar) findViewById(R.id.dw_release_toolbar);
         setTitle("");
         int id = R.drawable.dw_release_human_1;

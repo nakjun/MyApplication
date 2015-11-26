@@ -18,7 +18,6 @@ import android.widget.Toast;
 import com.example.nj.myapplication.HubActivity;
 import com.example.nj.myapplication.IDSingletonclass;
 import com.example.nj.myapplication.R;
-import com.example.nj.myapplication.Util;
 
 import java.io.BufferedReader;
 import java.io.InputStreamReader;
@@ -46,7 +45,7 @@ public class YN_WEEKLYDATA extends Activity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_yn__weeklydat);
-        Util.setGlobalFont(this, getWindow().getDecorView());
+
         init();
 
         img_setup=new boolean[7];

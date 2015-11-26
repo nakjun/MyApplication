@@ -9,7 +9,6 @@ import android.view.View;
 import android.widget.ImageView;
 
 import com.example.nj.myapplication.R;
-import com.example.nj.myapplication.Util;
 
 public class MentActivity extends Activity {
 
@@ -17,7 +16,7 @@ public class MentActivity extends Activity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_ment);
-        Util.setGlobalFont(this, getWindow().getDecorView());
+
         ImageView imgview = (ImageView)findViewById(R.id.imageView_Ment);
         imgview.setOnClickListener(new View.OnClickListener() {
             @Override

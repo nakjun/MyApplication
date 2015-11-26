@@ -14,7 +14,6 @@ import android.widget.ImageView;
 import android.widget.TextView;
 
 import com.example.nj.myapplication.R;
-import com.example.nj.myapplication.Util;
 
 import java.util.Random;
 
@@ -29,7 +28,7 @@ public class DPSelectActivity extends Activity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_dpselect);
-        Util.setGlobalFont(this, getWindow().getDecorView());
+
         i = new Intent(DPSelectActivity.this, DPRateActivity.class);
         status = 0;
 

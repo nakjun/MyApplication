@@ -17,7 +17,6 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import com.example.nj.myapplication.R;
-import com.example.nj.myapplication.Util;
 
 import org.w3c.dom.Text;
 
@@ -53,7 +52,7 @@ public class DPRateActivity extends Activity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_dprate);
-        Util.setGlobalFont(this, getWindow().getDecorView());
+
         init_imgView();
 
         Tview = (TextView)findViewById(R.id.textView_rate_discription);

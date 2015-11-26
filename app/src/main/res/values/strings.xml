@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">Wellness Application</string>
+    <string name="app_name">My Application</string>
 
     <string name="hello_world">Hello world!</string>
     <string name="action_settings">Settings</string>
@@ -52,7 +52,4 @@
     <string name="title_activity_sm__activity_7">SM_Activity_7</string>
     <string name="title_activity_sm__activity_8">SM_Activity_8</string>
     <string name="title_activity_sm__activity_9">SM_Activity_9</string>
-    <string name="title_activity_cdi_">CDI_Activity</string>
-    <string name="title_activity_cdi_1">CDI_Activity1</string>
-    <string name="title_activity_cdi_3">CDI_Activity3</string>
 </resources>

@@ -8,7 +8,6 @@ import android.view.MenuItem;
 import android.widget.TextView;
 
 import com.example.nj.myapplication.R;
-import com.example.nj.myapplication.Util;
 
 public class YN_boardActivity extends Activity {
 
@@ -18,7 +17,7 @@ public class YN_boardActivity extends Activity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_yn_board);
-        Util.setGlobalFont(this, getWindow().getDecorView());
+
         index1=YNActionAcitivity.index;
         index2=YNActionAcitivity.index2;
 
